@@ -1,0 +1,20 @@
+<h2>
+  Add new drone
+</h2>
+<form action="/drones" method="post">
+  <label for="drone-name-input">Drone Name:</label>
+  <input id="drone-name-input" type="text" name="droneName">
+  <label for="propellers-input">Propellers Name:</label>
+  <input id="propellers-input" type="text" name="propellers">
+  <label for="MaxSpeed-input">Max Speed:</label>
+  <input id="MaxSpeed-input" type="text" name="maxSpeed">
+  <input type="submit" value="Save Drone">
+</form>
+
+<% if (typeof(errors) !== "undefined"){ %>
+  <% for (let error in errors){ %>
+    <li>
+      <%= errors[error].message %>
+    </li>
+    <% } %>
+      <% } %>
